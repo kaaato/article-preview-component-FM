@@ -4,6 +4,7 @@ let authorButton = document.querySelector(".author__button");
 let tooltip;
 
 authorButton.addEventListener("click", handleClickOnAuthorButton);
+window.onresize = handleResize;
 
 function handleClickOnAuthorButton(event) {
   let windowWidth = document.documentElement.clientWidth;
@@ -25,6 +26,14 @@ function handleClickOnAuthorButton(event) {
       switchFooter();
     }
   }
+}
+
+function handleResize(event) {
+  if (!tooltip) return;
+
+  tooltip.style.left = authorButton.getBoundingClientRect().left - ((tooltip.offsetWidth - authorButton.offsetWidth) / 2 ) + "px";
+  let textElement = document.querySelector(".text");
+  tooltip.style.top = textElement.getBoundingClientRect().top + "px";
 }
 
 function removeTooltip(event) {
