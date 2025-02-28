@@ -111,7 +111,7 @@ p {
 }
 
 .author {
-  padding-bottom: 1.5rem;
+  padding-block: 1rem;
 }
 
 .figure {
@@ -161,7 +161,7 @@ p {
 
 .share-links {
   background-color: var(--color-primary-dark);
-  min-height: 4rem;
+  min-height: 4.5rem;
   gap: 1rem;
   position: absolute;
   width: 100%;
@@ -245,10 +245,6 @@ p {
 
   .footer {
     padding-inline: 2.5rem;
-  }
-
-  .author {
-    padding-block-end: 2rem;
   }
 
   .share-links {
