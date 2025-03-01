@@ -31,9 +31,7 @@ function handleClickOnAuthorButton(event) {
 function handleResize(event) {
   if (!tooltip) return;
 
-  tooltip.style.left = authorButton.getBoundingClientRect().left - ((tooltip.offsetWidth - authorButton.offsetWidth) / 2 ) + "px";
-  let textElement = document.querySelector(".text");
-  tooltip.style.top = textElement.getBoundingClientRect().top + "px";
+  removeTooltip();
 }
 
 function removeTooltip(event) {
