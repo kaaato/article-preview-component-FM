@@ -100,10 +100,6 @@ p {
   font-weight: 500;
 }
 
-.footer-container {
-  position: relative;
-}
-
 .footer {
   display: flex;
   align-items: center;
@@ -163,10 +159,7 @@ p {
   background-color: var(--color-primary-dark);
   min-height: 4.5rem;
   gap: 1rem;
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
 }
 
 .share-links__text {
@@ -214,6 +207,10 @@ p {
   color: hsl(228, 45%, 44%); 
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 40rem) {
   .card {
     display: grid;
@@ -254,9 +251,6 @@ p {
   .tooltip {
     width: 250px;
     position: absolute;
-  }
-
-  .tooltip__contents {
     display: flex;
     height: 55px;
     padding-inline: 2rem;
@@ -265,18 +259,17 @@ p {
     align-items: center;
   }
 
-  .tooltip__list {
-    justify-content: flex-end;
-  }
-
-  .triangle-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .triangle {
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 113px;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 12px solid var(--color-primary-dark);
+  }
+
+  .list--tooltip {
+    justify-content: flex-end;
   }
 }
